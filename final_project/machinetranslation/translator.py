@@ -24,12 +24,12 @@ def english_to_french(english_text):
     """
     english_text = translation['translations'][0]['translation']
     french_text = ak.translate(text = english_text,model_id ='en-fr').get_result()
-    return french_text
+    return french_text.get("translations")[0].get("translation")
 
 def french_to_english(french_text):
     """
     This function translates the text from french to english
     """
     english_text = ak.translate(text=french_text,model_id='fr-en').get_result()
-    return english_text
+    return english_text.get("translations")[0].get("translation")
     
