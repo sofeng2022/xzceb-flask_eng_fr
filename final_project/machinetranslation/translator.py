@@ -15,7 +15,7 @@ ak = LanguageTranslatorV3(version='2018-05-01',authenticator=authenticator)
 
 ak.set_service_url(url)
 
-translation = ak.translate(text='Hola, cómo estás hoy?',model_id='es-en').get_result()
+translation = ak.translate(text='Hola, cómo eres?',model_id='es-en').get_result()
 print(json.dumps(translation, indent=2, ensure_ascii=False))
 
 def english_to_french(english_text):
